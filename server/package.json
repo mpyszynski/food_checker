@@ -1,0 +1,24 @@
+{
+  "name": "check_product_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "jest"
+  },
+  "author": "Michal Pyszynski",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "eslint-config-salt": "^1.0.1",
+    "express": "^4.17.1",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
