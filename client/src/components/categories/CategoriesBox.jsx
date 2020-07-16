@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Grid, Segment } from 'semantic-ui-react'
+import { Grid, Segment } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import './Categories.css'
 

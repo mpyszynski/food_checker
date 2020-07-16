@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import CategoriesBoard from './CategoriesBoard';
 import Text from '../inputs/Text';
-import { getCategories } from '../../mockCalls/mockCategories';
+// import { getCategories } from '../../mockCalls/mockCategories';
 import { filterCategories } from '../../helpers/filterCategories';
 import axios from 'axios';
 
@@ -39,15 +39,16 @@ export default function CategoriesMain() {
 
   useEffect(() => {
     axios.get('/categories').then(res => dispatch({type: 'GET_CATEGORIES', categories: res.data}))
+    // Developer mode 
     // setTimeout(() => {
     //   dispatch({ type: 'GET_CATEGORIES', categories: getCategories() });
-    // }, 1000);
+    // }, 1000); 
   }, []);
 
   useEffect(() => {
     const userCategories = filterCategories(categories, filterValue);
     dispatch({ type: 'FILTER_CATEGORIES', categories: userCategories });
-  }, [filterValue]);
+  }, [filterValue, categories]);
 
   return (
     <div>

@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import ProductsBoard from './ProductsBoard';
-import { getProducts } from '../../mockCalls/mockProducts';
+// import { getProducts } from '../../mockCalls/mockProducts';
 import { filterProducts } from '../../helpers/filterCategories';
 import Text from '../inputs/Text';
 
@@ -42,15 +42,16 @@ export default function ProductsMain() {
     axios
       .get(`/categories/${name}`)
       .then(res => dispatch({ type: 'GET_PRODUCTS', products: res.data }));
+    // Development mode
     // setTimeout(() => {
     //   dispatch({ type: 'GET_PRODUCTS', products: getProducts() });
     // }, 1000);
-  }, []);
+  }, [name]);
 
   useEffect(() => {
     const userProducts = filterProducts(products, filterValue);
     dispatch({ type: 'FILTER_PRODUCTS', products: userProducts });
-  }, [filterValue]);
+  }, [filterValue, products]);
   return (
     <div>
       <Text

@@ -7,6 +7,7 @@ export default function ProductsBoard({ products }) {
   const renderProducts = products
     .filter(x => {
       if (x.product_name) return x;
+      return false
     })
     .map(x => (
       <ProductBox

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
-import { getProduct } from '../../mockCalls/mockProducts';
+// import { getProduct } from '../../mockCalls/mockProducts';
 import { Card, Image, Button } from 'semantic-ui-react';
 import ProductTable from './ProductTable';
 import CustomTable from './CustomTable';
@@ -16,10 +16,10 @@ export default function Product() {
 
   useEffect(() => {
     axios.get(`/products/${id}`).then(res => setProduct(res.data));
+    // Development mode
     // setTimeout(() => setProduct(getProduct()), 1000);
-  }, []);
+  }, [id]);
   const renderLabels = product.labels ? transformLabels(product.labels) : [];
-  // console.log(product.categories_tags);
   let category = '/'
   product.categories_tags ? category = `/categories/${product.categories_tags[0]}` : category = '/'
   return (
