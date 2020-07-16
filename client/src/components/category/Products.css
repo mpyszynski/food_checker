@@ -1,0 +1,19 @@
+.products__main {
+    margin: 10px auto !important
+}
+.products__grid {
+    margin-bottom: 15px !important;
+}
+.products__card{
+    display: flex !important;
+    justify-content: center;
+
+}
+
+.products__image {
+    height: 250px;
+}
+
+.products__label{
+    margin-bottom: 5px !important;
+}

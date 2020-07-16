@@ -1,0 +1,13 @@
+.categories__main {
+    margin: 10px 20px !important
+}
+
+.categories__grid {
+    margin-bottom: 15px !important;
+}
+
+.categories__segment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

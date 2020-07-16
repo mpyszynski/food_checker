@@ -1,0 +1,27 @@
+.product__main {
+    margin: 10px auto !important;
+}
+.products__card {
+    width: 80% !important;
+    margin: 0 auto !important;
+}
+
+.products__header {
+    margin-bottom: 10px;
+}
+.product__descr {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .product__main {
+        width: 60% !important;
+
+    }
+    .product__main img {
+        width: 70% !important;
+        margin: 0 auto !important;
+    }
+}
