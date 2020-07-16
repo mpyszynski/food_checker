@@ -2,10 +2,14 @@
   "name": "check_product_server",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "12.x"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jest"
+    "test": "jest",
+    "heroku-postbuild": "cd ../ && cd client && npm install && npm run build"
   },
   "author": "Michal Pyszynski",
   "license": "MIT",
