@@ -8,8 +8,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "jest",
-    "heroku-postbuild": "cd ../ && cd client && npm install && npm run build"
+    "test": "jest"
   },
   "author": "Michal Pyszynski",
   "license": "MIT",
