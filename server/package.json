@@ -14,7 +14,7 @@
   "author": "Michal Pyszynski",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "eslint-config-salt": "^1.0.1",
     "express": "^4.17.1",
     "jest": "^26.1.0",
